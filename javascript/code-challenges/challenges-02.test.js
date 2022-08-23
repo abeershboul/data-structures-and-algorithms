@@ -98,6 +98,8 @@ For example: charCode(['h','i']) returns [104, 105].
 
 const charCode = (arr) => {
   // Solution code here...
+  return arr.map(num => num.charCodeAt());
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -110,11 +112,20 @@ If any element in the array is not a number, the resulting array should have the
 For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 ------------------------------------------------------------------------------------------------ */
 
-const evenOdd = (arr) => {
-  // Solution code here...
-  return arr.map(num => num.charCodeAt());
 
-};
+  const evenOdd = (arr) => {
+    return (arr.map(num => {
+      if (num % 2 === 0) {
+        return 'even';
+      } else if (isNaN(num)){
+        return 'N/A';
+      } else if (num % 2 !== 0){
+        return 'odd';
+      }
+    }));
+  };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
