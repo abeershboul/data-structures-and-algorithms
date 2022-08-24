@@ -7,13 +7,12 @@ Write a function called addTwo that takes in an array and adds two to every valu
 ------------------------------------------------------------------------------------------------ */
 
 const addTwo = (arr) => {
-  // Solution code here...
-  let newarr=[];  
-  for(let i=0;i<arr.length;i++){
-
-    newarr.push(arr[i] + 2);
+  const newArray = [];
+  for (let i = 0; i < arr.length; i++){
+    let addedTwoNum = arr[i] + 2;
+    newArray.push(addedTwoNum);
   }
-  return newarr;
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -25,10 +24,8 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const typeNum = (arr) => {
-  // Solution code here...
-  let newarr=arr.filter(num => typeof num === 'number');
-  return newarr;
-
+  const filteredArray = arr.filter(index => !isNaN(index))
+  return filteredArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -40,9 +37,8 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 ------------------------------------------------------------------------------------------------ */
 
 const containsAnd = (arr) => {
-  // Solution code here...
-  let newarr=arr.filter(string => string.incluades('and'));
-  return newarr;
+  const andArry = arr.filter(item => item.includes("and"));
+  return andArry;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -54,8 +50,8 @@ For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const oddValues = (arr) => {
-  return arr.filter(num =>(num%2));
-  // Solution code here...
+  const oddArray = arr.filter(item => item % 2 !== 0)
+  return oddArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -67,9 +63,8 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  // Solution code here...
-  return arr.filter(num => !(forbiddenValues.includes(num)));
-
+  const notInFirstArrFilteredArr = arr.filter( item => !(forbiddenValues.includes(item)))
+  return notInFirstArrFilteredArr
 };
 
 /* ------------------------------------------------------------------------------------------------
