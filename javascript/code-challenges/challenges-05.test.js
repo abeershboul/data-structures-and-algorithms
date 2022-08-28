@@ -15,6 +15,7 @@ const toLastNames = people => {
   const fullname=people.map((val)=>{
     return(val.firstName+''+val.lastName);
   });
+
   return fullname;
 
 };
